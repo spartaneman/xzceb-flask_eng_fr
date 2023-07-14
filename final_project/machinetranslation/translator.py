@@ -3,15 +3,13 @@
 from deep_translator import MyMemoryTranslator
 
 #Method take in english text and outputs french translated text
-def englishToFrench(englishText):
-    
+def english_to_french(english_text):
     """Use MyMemoryTranslator API to convert english text to french"""
-    frenchText = MyMemoryTranslator(source='auto', target='french').translate(englishText)
-    
-    return frenchText
+    french_text = MyMemoryTranslator(source='english', target='french').translate(english_text)
+    return french_text
 
 #Method takes in french text and outputs english translated text
-def frenchToEnglish(frenchText):
-
+def french_to_english(french_text):
     """Use MyMemoryTranslator API to convert french text to english"""
-    englishText = MyMemoryTranslator(source='auto', target='english').translate(frenchText)
+    english_text = MyMemoryTranslator(source='french', target='english').translate(french_text)
+    return english_text
